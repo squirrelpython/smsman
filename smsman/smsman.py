@@ -6,7 +6,7 @@ from smsman.errors import WrongTokenError, SMSnotReceivedError, LowBalance, NoNu
 
 
 class Smsman:
-    __base_url = "http://api.sms-man.ru/control"
+    __base_url = "http://api.sms-man.com/control"
     __method_balance = "/get-balance"
     __method_get_limits = "/limits"
     __method_get_number = "/get-number"
@@ -15,7 +15,7 @@ class Smsman:
     __method_get_all_services = "/applications"
     __method_reject_number = "/set-status"
 
-    def __init__(self, token: str, ref="p_moTasn52wq"):
+    def __init__(self, token: str, ref="3wftWnHlGBN_"):
         """
         :param token: Your Token from sms-man.com
         :param ref: Your referal code
