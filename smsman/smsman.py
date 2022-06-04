@@ -36,14 +36,10 @@ class Smsman:
         """
 
         response = requests.get(self.__base_url + self.__method_balance, params=self.__params)
-        try:
-
-            if "balance" in response.json():
-                return float(response.json()['balance'])
-            else:
-                raise WrongTokenError(response.json()['error_msg'])
-        except:
-            self.get_balance()
+        if "balance" in response.json():
+            return float(response.json()['balance'])
+        else:
+            raise WrongTokenError(response.json()['error_msg'])
 
     def get_limits(self, country_id=None, application_id=None):
         """
